@@ -3,30 +3,6 @@ import { expect, Page } from "@playwright/test";
 export class YahooFinanceBasePage {
     constructor(readonly page: Page) {}
 
-    // SUPER FUN WHEEL UI ELEMENT LOCATORS
-    protected preloaderLocator: string = '#preloader';
-    protected playerBalanceLocator: string = 'Balance:';
-    protected betAmountLocator: string = 'Bet:';
-    protected increaseBetLocator: string = '//*[@id="increment-button"]';
-    protected decreaseBetLocator: string = '//*[@id="decrement-button"]';
-    protected spinButtonLocator: string = '//*[@id="spin-button"]'
-    protected autoPlayButtonLocator: string = '#autoplay-button';
-    protected winAmountLocator: string = 'Win:';
-    protected quickSpinLabelLocator: string = '#quick-spin-label';
-    protected quickSpinToggleLocator: string = '#quick-spin-button';
-
-    // TRACK PLAYER, BET, AND WIN AMOUNTS
-    public startingPlayerBalance: number = 1000;
-    protected currentPlayerBalance: number = 0;
-    public startingBetAmount: number = 10;
-    protected currentBetAmount: number = 0;
-    public startingWinAmount: number = 0;
-    protected currentWinAmount: number = 0;
-
-    protected result: number = 0;
-    protected quickSpinToggled: boolean = false;
-    protected autoplayToggled: boolean = false;
-
     public async navigateToUrl(): Promise<void> {
         await this.page.goto('/')
     };
