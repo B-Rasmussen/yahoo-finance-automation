@@ -8,14 +8,7 @@ export class YahooFinanceBasePage {
     protected marketStockGainersLocator: string = 'Stocks: Gainers';
     protected marketStockLosersLocator: string = 'Stocks: Losers';
 
-    // STOCKS TABLE LOCATORS
-    protected stocksMostActiveLocator: string = "//*[@title='Most Active']";
-    protected stocksTrendingNowLocator: string = "//*[@title='Trending Now']";
-    protected stocksTopGainersLocator: string = "//*[@title='Top Gainers']";
-    protected stocksTopLosersLocator: string = "//*[@title='Top Losers']";
-    protected stocks52WeekGainersLocator: string = "//*[@title='52 Week Gainers']";
-    protected stocks52WeekLosersLocator: string = "//*[@title='52 Week Losers']";
-    protected stocksTableLocator: string  = "//*[@data-testid='table-container']";
+
 
     public async navigateToUrl(): Promise<void> {
         await this.page.goto('/')
